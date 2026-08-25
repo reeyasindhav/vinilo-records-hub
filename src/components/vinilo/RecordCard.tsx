@@ -80,7 +80,9 @@ export function RecordCard({
           }}
           className={cn(
             "shrink-0 rounded-full p-1.5 transition-colors",
-            onDark ? "text-ink-muted hover:text-primary" : "text-muted-foreground hover:text-primary",
+            onDark
+              ? "text-ink-muted hover:text-primary"
+              : "text-muted-foreground hover:text-primary",
           )}
         >
           <Heart className={cn("h-4 w-4", saved && "fill-primary text-primary")} />

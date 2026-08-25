@@ -10,6 +10,16 @@ const cols = [
     ],
   },
   {
+    title: "Support",
+    links: [
+      { to: "/contact", label: "Contact us" },
+      { to: "/faq", label: "FAQ" },
+      { to: "/about", label: "About" },
+      { to: "/privacy", label: "Privacy policy" },
+      { to: "/terms", label: "Terms of use" },
+    ],
+  },
+  {
     title: "Collectors",
     links: [
       { to: "/condition-guide", label: "Condition guide" },
@@ -23,7 +33,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-display text-3xl leading-none">
               vinilo<span className="text-primary">.</span>

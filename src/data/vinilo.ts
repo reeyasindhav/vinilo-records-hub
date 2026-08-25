@@ -31,14 +31,7 @@ export const grades: Record<
   },
 };
 
-export const genres = [
-  "Jazz",
-  "Rock",
-  "Hip-Hop",
-  "Electronic",
-  "Folk",
-  "Soul",
-] as const;
+export const genres = ["Jazz", "Rock", "Hip-Hop", "Electronic", "Folk", "Soul"] as const;
 
 export type Genre = (typeof genres)[number];
 
@@ -147,8 +140,7 @@ export const records: Record_[] = [
     image: img("1495305379050-64540d6ee95d"),
     sellerId: "groove-society",
     featured: true,
-    notes:
-      "Opened once for a single listen. Gatefold is sharp, both discs are flawless.",
+    notes: "Opened once for a single listen. Gatefold is sharp, both discs are flawless.",
     tracks: [
       { n: "A1", title: "Lost Ones", length: "5:33" },
       { n: "A2", title: "Ex-Factor", length: "5:26" },
@@ -193,8 +185,7 @@ export const records: Record_[] = [
     image: img("1470225620780-dba8ba36b745"),
     sellerId: "needle-drop",
     featured: true,
-    notes:
-      "Warm, intimate pressing. Sleeve shows honest shelf wear at the corners.",
+    notes: "Warm, intimate pressing. Sleeve shows honest shelf wear at the corners.",
     tracks: [
       { n: "A1", title: "All I Want", length: "3:34" },
       { n: "A2", title: "My Old Man", length: "3:34" },
@@ -254,12 +245,11 @@ export const records: Record_[] = [
     grade: "VG",
     sleeveGrade: "VG",
     genre: "Soul",
-    pressing: "Tamla, with bonus 7\"",
+    pressing: 'Tamla, with bonus 7"',
     label: "Tamla",
     image: img("1459749411175-04bf5292ceea"),
     sellerId: "maggies-crate",
-    notes:
-      "Complete with booklet and the bonus EP. Well played but full of life.",
+    notes: "Complete with booklet and the bonus EP. Well played but full of life.",
     tracks: [
       { n: "A1", title: "Love's in Need of Love Today", length: "7:06" },
       { n: "B1", title: "Sir Duke", length: "3:52" },
@@ -301,8 +291,7 @@ export const records: Record_[] = [
     label: "Island",
     image: img("1508700929628-666bc8bd84ea"),
     sellerId: "maggies-crate",
-    notes:
-      "A true crate find. Audible surface noise but the performance shines through.",
+    notes: "A true crate find. Audible surface noise but the performance shines through.",
     tracks: [
       { n: "A1", title: "Pink Moon", length: "2:04" },
       { n: "A3", title: "Which Will", length: "2:58" },
@@ -391,8 +380,7 @@ export const sellers: Seller[] = [
 
 export const getRecord = (id: string) => records.find((r) => r.id === id);
 export const getSeller = (id: string) => sellers.find((s) => s.id === id);
-export const recordsBySeller = (id: string) =>
-  records.filter((r) => r.sellerId === id);
+export const recordsBySeller = (id: string) => records.filter((r) => r.sellerId === id);
 
 export const reviews = [
   {
@@ -465,10 +453,42 @@ export const orders = [
 ];
 
 export const listings = [
-  { id: "L-201", record: "Kind of Blue", grade: "NM", price: 42, views: 318, offers: 4, status: "Live" },
-  { id: "L-198", record: "Led Zeppelin IV", grade: "VG+", price: 55, views: 204, offers: 2, status: "Live" },
-  { id: "L-190", record: "Songs in the Key of Life", grade: "VG", price: 74, views: 96, offers: 0, status: "Draft" },
-  { id: "L-184", record: "Midnight Marauders", grade: "VG+", price: 46, views: 512, offers: 7, status: "Sold" },
+  {
+    id: "L-201",
+    record: "Kind of Blue",
+    grade: "NM",
+    price: 42,
+    views: 318,
+    offers: 4,
+    status: "Live",
+  },
+  {
+    id: "L-198",
+    record: "Led Zeppelin IV",
+    grade: "VG+",
+    price: 55,
+    views: 204,
+    offers: 2,
+    status: "Live",
+  },
+  {
+    id: "L-190",
+    record: "Songs in the Key of Life",
+    grade: "VG",
+    price: 74,
+    views: 96,
+    offers: 0,
+    status: "Draft",
+  },
+  {
+    id: "L-184",
+    record: "Midnight Marauders",
+    grade: "VG+",
+    price: 46,
+    views: 512,
+    offers: 7,
+    status: "Sold",
+  },
 ];
 
 export const salesTrend = [

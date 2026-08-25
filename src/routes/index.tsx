@@ -144,7 +144,10 @@ function Home() {
               No vague "good condition" listings here. We use Goldmine standards so every spin is a
               confident one — media and sleeve graded separately.
             </p>
-            <Link to="/condition-guide" className="label-mono mt-6 inline-block text-primary underline-sweep">
+            <Link
+              to="/condition-guide"
+              className="label-mono mt-6 inline-block text-primary underline-sweep"
+            >
               Read the full guide →
             </Link>
           </div>

@@ -49,7 +49,7 @@ export function SiteHeader() {
               key={n.to}
               to={n.to}
               className="text-sm text-muted-foreground underline-sweep transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
+              activeProps={{ className: "text-foreground underline" }}
             >
               {n.label}
             </Link>
@@ -81,7 +81,7 @@ export function SiteHeader() {
             variant="outline"
             className="label-mono ml-1 hidden rounded-sm border-foreground/25 bg-transparent hover:bg-foreground hover:text-background sm:inline-flex"
           >
-            <Link to={user ? "/dashboard" : "/login"}>{user ? "Dashboard" : "Sell a record"}</Link>
+            <Link to={user ? "/dashboard" : "/login"}>{user ? "Dashboard" : "Sign in"}</Link>
           </Button>
           <button
             className="ml-1 rounded-full p-2 md:hidden"
@@ -100,18 +100,20 @@ export function SiteHeader() {
         )}
       >
         <nav className="flex flex-col gap-1 px-5 py-3">
-          {[...nav, { to: user ? "/dashboard" : "/login", label: user ? "Dashboard" : "Sign in" }].map(
-            (n) => (
-              <Link
-                key={n.label}
-                to={n.to}
-                onClick={() => setOpen(false)}
-                className="py-2 text-sm text-muted-foreground"
-              >
-                {n.label}
-              </Link>
-            ),
-          )}
+          {[
+            ...nav,
+            { to: user ? "/dashboard" : "/login", label: user ? "Dashboard" : "Sign in" },
+          ].map((n) => (
+            <Link
+              key={n.label}
+              to={n.to}
+              onClick={() => setOpen(false)}
+              className="py-2 text-sm text-muted-foreground"
+              activeProps={{ className: "text-foreground font-medium" }}
+            >
+              {n.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
